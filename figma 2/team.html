@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Team Member | Random IT Solution</title>
+    <meta name="viewport" content="width=1440" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Be Vietnam Pro", sans-serif;
+      }
+      body {
+        background: #fff;
+      }
+      .page {
+        width: 1440px;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      /* ================= NAVBAR ================= */
+      .navbar {
+        height: 95px;
+        padding: 25px 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fafafa;
+        border-bottom: 1px solid #d5d5d5;
+      }
+      .nav-left {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+      }
+      .logo {
+        width: 36px;
+      }
+      .nav-links a {
+        margin-right: 26px;
+        font-size: 14px;
+        color: #262626;
+        text-decoration: none;
+      }
+      .nav-links .active {
+        background: #281571;
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 5px;
+      }
+      .contact-btn {
+        background: #dc2316;
+        color: #fff;
+        padding: 12px 24px;
+        border-radius: 6px;
+        font-weight: 600;
+        border: none;
+      }
+
+      /* ================= HERO ================= */
+      .hero {
+        height: 324px;
+        background: url("/figma 2/team-images/bg.png") center/cover no-repeat;
+        position: relative;
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(25, 25, 25, 0.7);
+      }
+      .hero-content {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        text-align: center;
+        padding: 0 70px;
+      }
+      .hero-content h1 {
+        font-size: 40px;
+        font-weight: 600;
+      }
+      .hero-content p {
+        margin-top: 20px;
+        font-size: 18px;
+        line-height: 28px;
+        max-width: 1300px;
+      }
+
+      /* ================= CEO SECTIONS ================= */
+      .leader {
+        display: flex;
+        gap: 23px;
+        width: 1300px;
+        margin: 70px auto;
+      }
+      .leader.reverse {
+        flex-direction: row-reverse;
+      }
+      .leader-img {
+        width: 639px;
+        height: 558px;
+        border: 1px solid #cacaca;
+        padding: 10px;
+      }
+      .leader-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .leader-content {
+        width: 638px;
+      }
+      .leader-content .label {
+        color: #dc2316;
+        font-weight: 700;
+        font-size: 18px;
+      }
+      .leader-content h2 {
+        margin-top: 18px;
+        font-size: 40px;
+        font-weight: 700;
+        color: #191919;
+      }
+      .leader-content p {
+        margin-top: 24px;
+        font-size: 18px;
+        line-height: 28px;
+        color: #343434;
+      }
+
+      .team-section {
+        width: 1300px;
+        margin: 100px auto;
+      }
+      .team-title {
+        margin-bottom: 40px;
+      }
+      .team-title span {
+        color: #dc2316;
+        font-weight: 700;
+        font-size: 18px;
+      }
+      .team-title h2 {
+        font-size: 40px;
+        font-weight: 700;
+        margin-top: 10px;
+      }
+      .team-grid {
+        display: flex;
+        gap: 42px;
+      }
+      .team-card {
+        width: 399px;
+      }
+      .team-image {
+        position: relative;
+        width: 358px;
+        height: 411px;
+        border: 1px solid #191919;
+        padding: 10px;
+      }
+      .team-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .team-info {
+        margin-top: 20px;
+      }
+      .team-info h3 {
+        font-size: 26px;
+        font-weight: 500;
+      }
+      .team-info p {
+        font-size: 18px;
+        color: #4e4e4e;
+        text-transform: uppercase;
+      }
+
+      /* ================= FOOTER ================= */
+      .footer {
+        background: #191919;
+        color: #fff;
+        padding: 60px 70px 30px;
+      }
+      .footer-top {
+        display: flex;
+        justify-content: space-between;
+      }
+      .footer-left {
+        width: 373px;
+      }
+      .footer-left img {
+        width: 68px;
+        margin-bottom: 20px;
+      }
+      .footer-left p {
+        margin-bottom: 12px;
+      }
+      .footer-col h4 {
+        margin-bottom: 10px;
+      }
+      .footer-col p {
+        margin-bottom: 8px;
+      }
+      .socials span {
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        background: #f7f7f8;
+        color: #191919;
+        text-align: center;
+        line-height: 36px;
+        margin-right: 14px;
+        border-radius: 5px;
+      }
+      .footer-bottom {
+        margin-top: 40px;
+        border-top: 1px solid rgba(255, 255, 255, 0.7);
+        padding-top: 20px;
+        text-align: center;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page">
+      <!-- NAVBAR -->
+      <header class="navbar">
+        <div class="nav-left">
+          <img src="/figma 2/assets/images/image.png" class="logo" />
+          <nav class="nav-links">
+            <a class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="team.html">Team</a>
+            <a href="tech-partner.html">Tech Partner</a>
+            <a>Projects</a>
+            <a>Services</a>
+            <a href="career.html">Career</a>
+            <a href="blog.html">Blog</a>
+          </nav>
+        </div>
+        <button class="contact-btn">Contact Us</button>
+      </header>
+
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Our Team</h1>
+          <p>
+            We have a sincere desire to make your business work quickly and
+            efficiently. Our team is made up of experts well trained and highly
+            experienced.
+          </p>
+        </div>
+      </section>
+
+      <!-- CEO -->
+      <section class="leader">
+        <div class="leader-img">
+          <img src="/figma 2/team-images/founder1.png" />
+        </div>
+        <div class="leader-content">
+          <span class="label">Founder</span>
+          <h2>John Anderson</h2>
+          <p>
+            Our leadership ensures smooth workflows, strong culture and a
+            commitment to quality service delivery.
+          </p>
+        </div>
+      </section>
+
+      <section class="leader reverse">
+        <div class="leader-img">
+          <img src="/figma 2/team-images/founder1.png" />
+        </div>
+        <div class="leader-content">
+          <span class="label">Director</span>
+          <h2>Emily Carter</h2>
+          <p>
+            We are 100% independent which enables us to sincerely present the
+            best product and solution suited to your needs.
+          </p>
+        </div>
+      </section>
+
+      <!-- TEAM -->
+      <section class="team-section">
+        <div class="team-title">
+          <span>Our Team</span>
+          <h2>Meet the Experts</h2>
+        </div>
+
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="team-image">
+              <img src="/figma 2/team-images/img1.png" />
+            </div>
+            <div class="team-info">
+              <h3>Montel Alekendar</h3>
+              <p>Product Designer</p>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-image">
+              <img src="/figma 2/team-images/img2.png" />
+            </div>
+            <div class="team-info">
+              <h3>Qaniel Burnside</h3>
+              <p>Back-end Developer</p>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-image">
+              <img src="/figma 2/team-images/img3.png" />
+            </div>
+            <div class="team-info">
+              <h3>Liliano Moore</h3>
+              <p>UI/UX Designer</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="footer-top">
+          <div class="footer-left">
+            <img src="/figma 2/assets/images/image.png" />
+            <p>hello@randomitsolution.com</p>
+            <p>+91 8448870418, +91 8507541015</p>
+            <p>Gurugram, Haryana</p>
+          </div>
+
+          <div class="footer-col">
+            <h4>Home</h4>
+            <p>Introduction</p>
+            <p>Our Clients</p>
+            <p>Our Services</p>
+          </div>
+
+          <div class="footer-col">
+            <h4>About</h4>
+            <p>Company</p>
+            <p>Achievements</p>
+            <p>Goals</p>
+          </div>
+
+          <div class="footer-col">
+            <h4>Follow us</h4>
+            <div class="socials">
+              <span>f</span><span>t</span><span>in</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          © 2024 Global Infotech. All rights reserved.
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

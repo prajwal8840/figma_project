@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog - Random IT Solutions</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Be Vietnam Pro", sans-serif;
+        background: #ffffff;
+        position: relative;
+        width: 1440px;
+        margin: 0 auto;
+        height: 3220px;
+        overflow-x: hidden;
+      }
+
+      /* Navbar */
+      .navbar {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 70px;
+        position: absolute;
+        width: 1440px;
+        height: 95px;
+        left: 0px;
+        top: 0px;
+        background: #fafafa;
+        border-bottom: 1px solid #d5d5d5;
+        z-index: 100;
+      }
+
+      .nav-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 50px;
+        width: 759.15px;
+        height: 41px;
+      }
+
+      .logo {
+        width: 36.15px;
+        height: 35px;
+        background: #dc2316;
+        border-radius: 4px;
+      }
+
+      .nav-buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 26px;
+        width: 673px;
+        height: 41px;
+      }
+
+      .nav-button {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px 0px;
+        gap: 10px;
+        height: 41px;
+        text-decoration: none;
+        color: #262626;
+        font-size: 14px;
+        font-weight: 400;
+        transition: all 0.3s;
+      }
+
+      .nav-button.active {
+        padding: 8px 16px;
+        background: #281571;
+        border-radius: 5px;
+        color: #ffffff;
+      }
+
+      .contact-button {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 12px 24px;
+        gap: 8px;
+        width: 127px;
+        height: 45px;
+        background: #dc2316;
+        border-radius: 6px;
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 14px;
+      }
+
+      /* Hero Section */
+      .hero-section {
+        position: absolute;
+        width: 1440px;
+        height: 315px;
+        left: 0px;
+        top: 95px;
+        background: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+          url("/figma 2/assets/images/bg.png");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hero-title {
+        font-family: "Be Vietnam Pro";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 150%;
+        color: #ffffff;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        margin-bottom: 24px;
+        text-align: center;
+      }
+
+      .search-box {
+        box-sizing: border-box;
+        width: 303px;
+        height: 37px;
+        background: #ffffff;
+        border: 1px solid #ffd9d7;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-family: "Be Vietnam Pro";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        text-transform: uppercase;
+        color: #99999a;
+      }
+
+      /* Category Filter */
+      .category-filter {
+        position: absolute;
+        width: 1300px;
+        height: 18px;
+        left: 70px;
+        top: 373px;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 10px 0;
+      }
+
+      .category-scroll {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        width: max-content;
+      }
+
+      .category-item {
+        font-family: "Be Vietnam Pro";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 150%;
+        text-transform: uppercase;
+        color: #efefef;
+        cursor: pointer;
+        transition: color 0.3s;
+      }
+
+      .category-item.active {
+        color: #dc2316;
+      }
+
+      .category-item:hover {
+        color: #dc2316;
+      }
+
+      /* Main Content Sections */
+      .content-section {
+        position: absolute;
+        width: 1336.65px;
+        height: 777.01px;
+        left: 71px;
+        top: 454px;
+      }
+
+      .section-title {
+        font-family: "Be Vietnam Pro";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 51px;
+        color: #191919;
+        margin-bottom: 24px;
+      }
+
+      .section-content {
+        display: flex;
+        flex-direction: row;
+        gap: 33px;
+        width: 100%;
+        height: 713.01px;
+      }
+
+      /* Featured Post */
+      .featured-post {
+        display: flex;
+        flex-direction: column;
+        gap: 8.8px;
+        width: 593.28px;
+        height: 713.01px;
+      }
+
+      .featured-image {
+        box-sizing: border-box;
+        width: 593.28px;
+        height: 396.83px;
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+          url("/_women.png");
+        background-size: cover;
+        background-position: center;
+        border: 1px solid #dc2316;
+        border-radius: 5px;
+      }
+
+      .post-category {
+        font-family: "Be Vietnam Pro";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 19.5481px;
+        line-height: 25px;
+        color: #dc2316;
+      }
+
+      .post-meta {
+        width: 138px;
+        height: 30px;
+        position: relative;
+      }
+
+      .meta-box {
+        box-sizing: border-box;
+        position: absolute;
+        width: 138px;
+        height: 30px;
+        background: #ffffff;
+        border: 0.5px solid #191919;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+      }
+
+      .meta-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 33px;
+        width: 109px;
+        height: 20px;
+      }
+
+      .author-icon {
+        width: 20px;
+        height: 20px;
+        background: #191919;
+        opacity: 0.1;
+        border-radius: 50%;
+        position: relative;
+      }
+
+      .author-icon::after {
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background: #bdc3c7;
+        border-radius: 50%;
+        top: 4px;
+        left: 4px;
+      }
+
+      .author-name {
+        font-family: "Be Vietnam Pro";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: #191919;
+      }
+
+      .post-title {
+        font-family: "Be Vietnam Pro";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 40px;
+        color: #414141;
+        width: 538.55px;
+        height: 80px;
+      }
+
+      .post-excerpt {
+        font-family: "Be Vietnam Pro";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15.1508px;
+        line-height: 24px;
+        color: #686868;
+        width: 593px;
+        height: 146px;
+      }
+
+      /* Side Posts */
+      .side-posts {
+        display: flex;
+        flex-direction: column;
+        gap: 27.37px;
+        width: 710.37px;
+        height: 703.93px;
+      }
+
+      .side-post {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 27.37px;
+        width: 710.37px;
+        height: 216.4px;
+      }
+
+      .side-image {
+        box-sizing: border-box;
+        width: 204px;
+        height: 198px;
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+          url("/img89.png");
+        background-size: cover;
+        background-position: center;
+        border: 1px solid #dc2316;
+        border-radius: 5px;
+      }
+
+      .side-content {
+        display: flex;
+        flex-direction: column;
+        gap: 10.8px;
+        width: 479px;
+        height: 216.4px;
+      }
+
+      .side-title {
+        font-family: "Be Vietnam Pro";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 28px;
+        color: #414141;
+        width: 479px;
+        height: 56px;
+      }
+
+      .side-excerpt {
+        font-family: "Be Vietnam Pro";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15.1508px;
+        line-height: 24px;
+        color: #686868;
+        width: 389px;
+        height: 73px;
+      }
+
+      /* View All Button */
+      .view-all {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        gap: 10px;
+        position: absolute;
+        width: 89px;
+        height: 41px;
+        left: 1280px;
+        top: 464px;
+        border-radius: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        font-family: "Be Vietnam Pro";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 150%;
+        text-transform: uppercase;
+        color: #dc2316;
+        transition: all 0.3s;
+      }
+
+      .view-all:hover {
+        background: rgba(220, 35, 22, 0.1);
+      }
+
+      /* Second Section */
+      .second-section {
+        position: absolute;
+        width: 1336.65px;
+        height: 777.01px;
+        left: 76px;
+        top: 1968px;
+      }
+
+      /* Carousel Section */
+      .carousel-section {
+        position: absolute;
+        width: 1295px;
+        height: 626px;
+        left: 70px;
+        top: 1282px;
+      }
+
+      .carousel-header {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 963px;
+        width: 1292.8px;
+        height: 45px;
+        margin-bottom: 29px;
+      }
+
+      .carousel-title {
+        font-family: "Be Vietnam Pro";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 51px;
+        color: #191919;
+        width: 239px;
+        height: 45px;
+      }
+
+      .carousel-controls {
+        display: flex;
+        gap: 15px;
+        width: 90.8px;
+        height: 39px;
+      }
+
+      .carousel-btn {
+        box-sizing: border-box;
+        width: 39px;
+        height: 39px;
+        background: #f9f9f9;
+        border: 0.609375px solid #3f3f3f;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      .carousel-btn:hover {
+        background: #3f3f3f;
+        color: #ffffff;
+      }
+
+      .carousel-btn i {
+        color: #3f3f3f;
+        font-size: 14px;
+      }
+
+      .carousel-btn:hover i {
+        color: #ffffff;
+      }
+
+      .carousel-posts {
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        width: 1295px;
+        height: 552px;
+      }
+
+      .carousel-post {
+        width: 415px;
+        height: 552px;
+        position: relative;
+        box-sizing: border-box;
+        border: 0.5px solid #191919;
+      }
+
+      .carousel-image {
+        position: absolute;
+        width: 387.96px;
+        height: 287px;
+        left: 13.52px;
+        top: 10px;
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+          url("/figma 2/assets/images/img_rectangle_25.png");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .carousel-post-meta {
+        position: absolute;
+        width: 360.93px;
+        height: 30px;
+        left: 27.04px;
+        top: 282px;
+      }
+
+      .carousel-meta-box {
+        box-sizing: border-box;
+        width: 360.93px;
+        height: 30px;
+        background: #ffffff;
+        border: 0.5px solid #191919;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        padding: 0 13.52px;
+      }
+
+      .carousel-meta-content {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 33px;
+        width: 247px;
+        height: 20px;
+      }
+
+      .carousel-post-content {
+        position: absolute;
+        width: 381.21px;
+        height: 210px;
+        left: 13.52px;
+        top: 327px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .carousel-post-text {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 374px;
+        height: 130px;
+      }
+
+      .carousel-post-title {
+        font-family: "Be Vietnam Pro";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        color: #191919;
+        width: 254px;
+        height: 24px;
+      }
+
+      .carousel-post-excerpt {
+        font-family: "Be Vietnam Pro";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #191919;
+        width: 374px;
+        height: 96px;
+      }
+
+      .read-more-btn {
+        width: 210px;
+        height: 50px;
+        position: relative;
+      }
+
+      .read-more-box {
+        box-sizing: border-box;
+        position: absolute;
+        width: 210px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.07);
+        border: 0.5px solid #191919;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      .read-more-box:hover {
+        background: #191919;
+        color: #ffffff;
+      }
+
+      .read-more-box:hover .read-more-text {
+        color: #ffffff;
+      }
+
+      .read-more-box:hover .arrow-box {
+        background: #ffffff;
+      }
+
+      .read-more-box:hover .arrow {
+        border-color: #191919;
+      }
+
+      .arrow-box {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        left: -50px;
+        top: 10px;
+        background: #191919;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .arrow {
+        box-sizing: border-box;
+        width: 13.5px;
+        height: 0px;
+        border: 2px solid #ffffff;
+      }
+
+      .read-more-text {
+        position: absolute;
+        width: 102px;
+        height: 28px;
+        left: 10px;
+        top: 11px;
+        font-family: "Be Vietnam Pro";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+        color: #191919;
+      }
+
+      /* Footer */
+      .footer {
+        position: absolute;
+        width: 1440px;
+        height: 458px;
+        left: 0;
+        bottom: 0;
+        background: #191919;
+      }
+
+      .footer-content {
+        position: absolute;
+        width: 1300px;
+        height: 332px;
+        left: 70px;
+        top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+      }
+
+      .footer-main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        height: 244px;
+      }
+
+      .footer-logo-section {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 373px;
+      }
+
+      .footer-logo {
+        width: 68.16px;
+        height: 66px;
+        background: #dc2316;
+        border-radius: 4px;
+      }
+
+      .footer-contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        width: 304px;
+      }
+
+      .footer-contact-item {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .footer-icon {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+      }
+
+      .footer-text {
+        font-family: "Be Vietnam Pro";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #ffffff;
+      }
+
+      .footer-links-section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 149px;
+      }
+
+      .footer-heading {
+        font-family: "Be Vietnam Pro";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 150%;
+        color: #ffffff;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 187px;
+      }
+
+      .footer-link {
+        font-family: "Be Vietnam Pro";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #ffffff;
+        text-decoration: none;
+      }
+
+      .footer-link:hover {
+        text-decoration: underline;
+      }
+
+      .footer-social {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 160px;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 14px;
+      }
+
+      .social-icon {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        background: #f7f7f8;
+        border: 1px solid #f1f1f3;
+        border-radius: 5px;
+        color: #191919;
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+
+      .social-icon:hover {
+        background: #dc2316;
+        color: #ffffff;
+      }
+
+      .footer-divider {
+        width: 100%;
+        height: 0px;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+      }
+
+      .footer-copyright {
+        font-family: "Be Vietnam Pro";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
+        color: #ffffff;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo"></div>
+        <div class="nav-buttons">
+          <a href="#" class="nav-button active">
+            <span>Home</span>
+          </a>
+          <a href="#" class="nav-button">
+            <span>About</span>
+          </a>
+          <a href="#" class="nav-button">
+            <span>Team</span>
+          </a>
+          <a href="#" class="nav-button">
+            <span>Tech Partner</span>
+          </a>
+          <a href="#" class="nav-button">
+            <span>Our Projects</span>
+          </a>
+          <a href="#" class="nav-button">
+            <span>Our Services</span>
+          </a>
+          <a href="#" class="nav-button">
+            <span>Career</span>
+          </a>
+          <a href="#" class="nav-button">
+            <span>Blog</span>
+          </a>
+        </div>
+      </div>
+      <a href="#" class="contact-button">
+        <span>Contact Us</span>
+      </a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <h1 class="hero-title">News and Articles</h1>
+      <input type="text" class="search-box" placeholder="Search" />
+    </section>
+
+    <!-- Category Filter -->
+    <div class="category-filter">
+      <div class="category-scroll">
+        <div class="category-item active">All</div>
+        <div class="category-item">Installing OS</div>
+        <div class="category-item">Problem Diagnosis</div>
+        <div class="category-item">Web Design</div>
+        <div class="category-item">Cloud Computing</div>
+        <div class="category-item">New computer setup</div>
+        <div class="category-item">Repair & Maintenance</div>
+        <div class="category-item">Cloud Computing</div>
+        <div class="category-item">Cloud Computing</div>
+        <div class="category-item">All</div>
+        <div class="category-item">Installing OS</div>
+        <div class="category-item">Problem Diagnosis</div>
+        <div class="category-item">Web Design</div>
+      </div>
+    </div>
+
+    <!-- Main Content Section 1 -->
+    <section class="content-section">
+      <h2 class="section-title">Cloud Computing</h2>
+      <button class="view-all">View All</button>
+
+      <div class="section-content">
+        <div class="featured-post">
+          <div class="featured-image"></div>
+          <div class="post-category">Cloud Computing</div>
+          <div class="post-meta">
+            <div class="meta-box">
+              <div class="meta-content">
+                <div class="author-icon"></div>
+                <div class="author-name">Paragraph</div>
+              </div>
+            </div>
+          </div>
+          <h3 class="post-title">
+            Lorem Ipsum is simply dummy text of the printing..
+          </h3>
+          <p class="post-excerpt">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type.
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type.
+          </p>
+        </div>
+
+        <div class="side-posts">
+          <div class="side-post">
+            <div class="side-image"></div>
+            <div class="side-content">
+              <div class="post-category">Cloud Computing</div>
+              <div class="post-meta">
+                <div class="meta-box">
+                  <div class="meta-content">
+                    <div class="author-icon"></div>
+                    <div class="author-name">Paragraph</div>
+                  </div>
+                </div>
+              </div>
+              <h4 class="side-title">
+                Lorem Ipsum is simply dummy text of the printing..
+              </h4>
+              <p class="side-excerpt">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard ..
+              </p>
+            </div>
+          </div>
+
+          <div class="side-post">
+            <div class="side-image"></div>
+            <div class="side-content">
+              <div class="post-category">Cloud Computing</div>
+              <div class="post-meta">
+                <div class="meta-box">
+                  <div class="meta-content">
+                    <div class="author-icon"></div>
+                    <div class="author-name">Paragraph</div>
+                  </div>
+                </div>
+              </div>
+              <h4 class="side-title">
+                Lorem Ipsum is simply dummy text of the printing..
+              </h4>
+              <p class="side-excerpt">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard ..
+              </p>
+            </div>
+          </div>
+
+          <div class="side-post">
+            <div class="side-image"></div>
+            <div class="side-content">
+              <div class="post-category">Cloud Computing</div>
+              <div class="post-meta">
+                <div class="meta-box">
+                  <div class="meta-content">
+                    <div class="author-icon"></div>
+                    <div class="author-name">Paragraph</div>
+                  </div>
+                </div>
+              </div>
+              <h4 class="side-title">
+                Lorem Ipsum is simply dummy text of the printing..
+              </h4>
+              <p class="side-excerpt">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard ..
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="carousel-section">
+      <div class="carousel-header">
+        <h2 class="carousel-title">Web Design</h2>
+        <div class="carousel-controls">
+          <button class="carousel-btn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="carousel-btn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="carousel-posts">
+        <!-- Post 1 -->
+        <div class="carousel-post">
+          <div class="carousel-image"></div>
+          <div class="carousel-post-meta">
+            <div class="carousel-meta-box">
+              <div class="carousel-meta-content">
+                <div class="author-icon"></div>
+                <div class="author-name">Paragraph</div>
+                <div class="author-icon"></div>
+                <div class="author-name">Comments</div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-post-content">
+            <div class="carousel-post-text">
+              <h3 class="carousel-post-title">Lorem Ipsum is simply dummy</h3>
+              <p class="carousel-post-excerpt">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s.
+              </p>
+            </div>
+            <div class="read-more-btn">
+              <div class="read-more-box">
+                <div class="arrow-box">
+                  <div class="arrow"></div>
+                </div>
+                <div class="read-more-text">Read more</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="carousel-post">
+          <div class="carousel-image"></div>
+          <div class="carousel-post-meta">
+            <div class="carousel-meta-box">
+              <div class="carousel-meta-content">
+                <div class="author-icon"></div>
+                <div class="author-name">Paragraph</div>
+                <div class="author-icon"></div>
+                <div class="author-name">Comments</div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-post-content">
+            <div class="carousel-post-text">
+              <h3 class="carousel-post-title">Lorem Ipsum is simply dummy</h3>
+              <p class="carousel-post-excerpt">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s.
+              </p>
+            </div>
+            <div class="read-more-btn">
+              <div class="read-more-box">
+                <div class="arrow-box">
+                  <div class="arrow"></div>
+                </div>
+                <div class="read-more-text">Read more</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="carousel-post">
+          <div class="carousel-image"></div>
+          <div class="carousel-post-meta">
+            <div class="carousel-meta-box">
+              <div class="carousel-meta-content">
+                <div class="author-icon"></div>
+                <div class="author-name">Paragraph</div>
+                <div class="author-icon"></div>
+                <div class="author-name">Comments</div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-post-content">
+            <div class="carousel-post-text">
+              <h3 class="carousel-post-title">Lorem Ipsum is simply dummy</h3>
+              <p class="carousel-post-excerpt">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s.
+              </p>
+            </div>
+            <div class="read-more-btn">
+              <div class="read-more-box">
+                <div class="arrow-box">
+                  <div class="arrow"></div>
+                </div>
+                <div class="read-more-text">Read more</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Second Content Section -->
+    <section class="content-section second-section">
+      <h2 class="section-title">Web Design</h2>
+      <button class="view-all" style="top: 0; left: 1280px">View All</button>
+
+      <div class="section-content">
+        <div class="featured-post">
+          <div class="featured-image"></div>
+          <div class="post-category">Web Design</div>
+          <div class="post-meta">
+            <div class="meta-box">
+              <div class="meta-content">
+                <div class="author-icon"></div>
+                <div class="author-name">Paragraph</div>
+              </div>
+            </div>
+          </div>
+          <h3 class="post-title">
+            Lorem Ipsum is simply dummy text of the printing..
+          </h3>
+          <p class="post-excerpt">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type.
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type.
+          </p>
+        </div>
+
+        <div class="side-posts">
+          <div class="side-post">
+            <div class="side-image"></div>
+            <div class="side-content">
+              <div class="post-category">Web Design</div>
+              <div class="post-meta">
+                <div class="meta-box">
+                  <div class="meta-content">
+                    <div class="author-icon"></div>
+                    <div class="author-name">Paragraph</div>
+                  </div>
+                </div>
+              </div>
+              <h4 class="side-title">
+                Lorem Ipsum is simply dummy text of the printing..
+              </h4>
+              <p class="side-excerpt">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard ..
+              </p>
+            </div>
+          </div>
+
+          <div class="side-post">
+            <div class="side-image"></div>
+            <div class="side-content">
+              <div class="post-category">Web Design</div>
+              <div class="post-meta">
+                <div class="meta-box">
+                  <div class="meta-content">
+                    <div class="author-icon"></div>
+                    <div class="author-name">Paragraph</div>
+                  </div>
+                </div>
+              </div>
+              <h4 class="side-title">
+                Lorem Ipsum is simply dummy text of the printing..
+              </h4>
+              <p class="side-excerpt">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard ..
+              </p>
+            </div>
+          </div>
+
+          <div class="side-post">
+            <div class="side-image"></div>
+            <div class="side-content">
+              <div class="post-category">Web Design</div>
+              <div class="post-meta">
+                <div class="meta-box">
+                  <div class="meta-content">
+                    <div class="author-icon"></div>
+                    <div class="author-name">Paragraph</div>
+                  </div>
+                </div>
+              </div>
+              <h4 class="side-title">
+                Lorem Ipsum is simply dummy text of the printing..
+              </h4>
+              <p class="side-excerpt">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard ..
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-main">
+          <div class="footer-logo-section">
+            <div class="footer-logo"></div>
+            <div class="footer-contact-info">
+              <div class="footer-contact-item">
+                <div class="footer-icon">📧</div>
+                <span class="footer-text">raghav@randomitsolutions.com</span>
+              </div>
+              <div class="footer-contact-item">
+                <div class="footer-icon">📞</div>
+                <span class="footer-text">+918448870418, +918507541015</span>
+              </div>
+              <div class="footer-contact-item">
+                <div class="footer-icon">📍</div>
+                <span class="footer-text"
+                  >2315/230, 2nd floor, Near Atul Kataria Chowk, behind Karim's
+                  Hotel, Near Sec-14 Gurugram, Haryana 122001</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-links-section">
+            <h3 class="footer-heading">Home</h3>
+            <div class="footer-links">
+              <a href="#" class="footer-link">Introduction</a>
+              <a href="#" class="footer-link">Our Clients</a>
+              <a href="#" class="footer-link">Our Services</a>
+              <a href="#" class="footer-link">Team</a>
+            </div>
+          </div>
+
+          <div class="footer-links-section">
+            <h3 class="footer-heading">About Us</h3>
+            <div class="footer-links">
+              <a href="#" class="footer-link">Company</a>
+              <a href="#" class="footer-link">Achievements</a>
+              <a href="#" class="footer-link">Our Goals</a>
+              <a href="#" class="footer-link">Management</a>
+            </div>
+          </div>
+
+          <div class="footer-social">
+            <h3 class="footer-heading">Follow us on</h3>
+            <div class="social-icons">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+        <div class="footer-copyright">
+          © 2024 Global Infotech. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

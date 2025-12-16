@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random IT Solutions - Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Be Vietnam Pro", sans-serif;
+        background: #ffffff;
+        width: 1440px;
+        margin: 0 auto;
+        position: relative;
+        height: 2316px;
+        overflow-x: hidden;
+      }
+
+      /* Navbar */
+      .navbar {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 70px;
+        gap: 552px;
+        position: absolute;
+        width: 1440px;
+        height: 95px;
+        left: 0px;
+        top: 0px;
+        background: #fafafa;
+        border-bottom: 1px solid #d5d5d5;
+        z-index: 1000;
+      }
+
+      .nav-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px;
+        gap: 50px;
+        margin: 0 auto;
+        width: 743.15px;
+        height: 41px;
+        flex: none;
+      }
+
+      .logo {
+        width: 36.15px;
+        height: 35px;
+        background: #dc2316;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 600;
+        font-size: 14px;
+      }
+
+      .nav-buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px;
+        gap: 26px;
+        width: 657px;
+        height: 41px;
+      }
+
+      .nav-button {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px 0px 10px 16px;
+        gap: 10px;
+        width: auto;
+        height: 41px;
+        border-radius: 6px;
+        text-decoration: none;
+        color: #262626;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 150%;
+      }
+
+      .nav-button:hover {
+        background: rgba(220, 35, 22, 0.05);
+      }
+
+      .contact-btn {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 12px 24px;
+        gap: 8px;
+        margin: 0 auto;
+        width: 127px;
+        height: 45px;
+        background: #dc2316;
+        border-radius: 6px;
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 150%;
+      }
+
+      /* Hero Banner */
+      .hero-banner {
+        position: absolute;
+        width: 1440px;
+        height: 324px;
+        left: 0px;
+        top: 95px;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url("https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        gap: 20px;
+        position: absolute;
+        width: 1299px;
+        height: 249px;
+        left: 70px;
+        top: 34px;
+      }
+
+      .hero-title {
+        width: 510px;
+        height: 51px;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 51px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+      }
+
+      .hero-description {
+        width: 1299px;
+        height: 178px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        text-align: center;
+        color: #ffffff;
+      }
+
+      /* Services Grid */
+      .services-grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: center;
+        padding: 0px;
+        gap: 24px;
+        position: absolute;
+        width: 1299px;
+        height: 1299px;
+        left: 70px;
+        top: 489px;
+      }
+
+      .service-card {
+        width: 417px;
+        height: 417px;
+        position: relative;
+      }
+
+      .service-card-bg {
+        position: absolute;
+        width: 417px;
+        height: 417px;
+        left: 0px;
+        top: 0px;
+        background: linear-gradient(
+            rgba(25, 25, 25, 0.71),
+            rgba(25, 25, 25, 0.71)
+          ),
+          url("https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .service-card-overlay {
+        position: absolute;
+        width: 417px;
+        height: 417px;
+        left: 0px;
+        top: 0px;
+        background: linear-gradient(
+          180deg,
+          rgba(25, 25, 25, 0) 0%,
+          #1d1d1d 109.17%
+        );
+      }
+
+      .service-content {
+        position: absolute;
+        width: 374.04px;
+        height: 262.98px;
+        left: 20.95px;
+        top: 154px;
+      }
+
+      .service-title {
+        width: 374.04px;
+        height: 80px;
+        font-weight: 600;
+        font-size: 31.43px;
+        line-height: 40px;
+        display: flex;
+        align-items: center;
+        color: #ffffff;
+        margin-bottom: 10.48px;
+      }
+
+      .service-description {
+        width: 374.04px;
+        height: 79px;
+        font-weight: 400;
+        font-size: 16.76px;
+        line-height: 26px;
+        color: #ffffff;
+      }
+
+      .service-divider {
+        position: absolute;
+        width: 374.04px;
+        height: 0px;
+        left: 20.95px;
+        top: 339.43px;
+        border: 1.05px solid #ffffff;
+      }
+
+      .service-button-container {
+        position: absolute;
+        width: 374.04px;
+        height: 77.53px;
+        left: 20.95px;
+        top: 339.43px;
+      }
+
+      .service-button {
+        position: absolute;
+        width: 220.03px;
+        height: 52.39px;
+        left: 0px;
+        top: 25.15px;
+        box-sizing: border-box;
+        background: rgba(255, 255, 255, 0.07);
+        border: 1.05px solid #ffffff;
+        display: flex;
+        align-items: center;
+        padding-left: 10.48px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .service-button:hover {
+        background: rgba(255, 255, 255, 0.15);
+      }
+
+      .service-button-text {
+        width: 107px;
+        height: 30px;
+        font-weight: 600;
+        font-size: 18.86px;
+        line-height: 29px;
+        color: #ffffff;
+      }
+
+      .service-arrow {
+        position: absolute;
+        width: 31.43px;
+        height: 31.43px;
+        left: 178.12px;
+        top: 10.48px;
+        background: #ffffff;
+        border-radius: 5.24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .service-arrow::before {
+        content: "";
+        width: 14.14px;
+        height: 0px;
+        border: 2.1px solid #dc2316;
+      }
+
+      /* Footer */
+      .footer {
+        position: absolute;
+        width: 1440px;
+        height: 458px;
+        left: 0px;
+        top: 1858px;
+        background: #191919;
+      }
+
+      .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 50px;
+        position: absolute;
+        width: 1300px;
+        height: 332px;
+        left: 70px;
+        top: 50px;
+      }
+
+      .footer-main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 125px;
+        width: 1300px;
+        height: 244px;
+      }
+
+      .footer-logo-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 30px;
+        width: 373px;
+        height: 244px;
+      }
+
+      .footer-logo {
+        width: 68.16px;
+        height: 66px;
+        background: #dc2316;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 600;
+        font-size: 24px;
+      }
+
+      .footer-contact {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        align-content: flex-start;
+        padding: 0px;
+        gap: 14px;
+        width: 304px;
+        height: 148px;
+      }
+
+      .contact-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px;
+        gap: 4px;
+        width: 291px;
+        height: 24px;
+        border-radius: 6px;
+      }
+
+      .contact-icon {
+        width: 20px;
+        height: 20px;
+        background: #ffffff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+        color: #191919;
+      }
+
+      .contact-text {
+        width: 267px;
+        height: 24px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #ffffff;
+      }
+
+      .address-item {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 4px;
+        width: 406px;
+        height: 72px;
+      }
+
+      .address-text {
+        width: 382px;
+        height: 72px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #ffffff;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 10px;
+        width: 149px;
+        height: 157px;
+      }
+
+      .footer-heading {
+        width: 149px;
+        height: 27px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 150%;
+        color: #ffffff;
+      }
+
+      .footer-links-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 8px;
+        width: 187px;
+        height: 120px;
+      }
+
+      .footer-link {
+        width: 187px;
+        height: 24px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #ffffff;
+        text-decoration: none;
+      }
+
+      .footer-link:hover {
+        color: #dc2316;
+      }
+
+      .footer-social {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 30px;
+        width: 160px;
+        height: 80px;
+      }
+
+      .social-heading {
+        width: 160px;
+        height: 24px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 150%;
+        color: #ffffff;
+      }
+
+      .social-icons {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 14px;
+        width: 136px;
+        height: 36px;
+      }
+
+      .social-icon {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px;
+        gap: 10px;
+        width: 36px;
+        height: 36px;
+        background: #f7f7f8;
+        border: 1px solid #f1f1f3;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #191919;
+        font-size: 14px;
+      }
+
+      .footer-divider {
+        width: 1300px;
+        height: 0px;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+      }
+
+      .footer-copyright {
+        width: 294px;
+        height: 18px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
+        color: #ffffff;
+        align-self: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">RIS</div>
+        <div class="nav-buttons">
+          <a href="main.html" class="nav-button">Home</a>
+          <a href="#" class="nav-button">Services</a>
+          <a href="#" class="nav-button">Partnership</a>
+          <a href="project.html" class="nav-button">Projects</a>
+          <a href="about.html" class="nav-button">About Us</a>
+          <a href="career.html" class="nav-button">Career</a>
+          <a href="blog.html" class="nav-button">Blog</a>
+          <a href="contact.html" class="nav-button">Contact</a>
+        </div>
+      </div>
+      <a href="#" class="contact-btn">Contact us</a>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+      <div class="hero-content">
+        <h1 class="hero-title">Our IT Services & Solutions</h1>
+        <p class="hero-description">
+          Random IT Solutions Pvt. Ltd. Is a totally IT solutions and services
+          provider, RIS offering a diverse range of IT products (hardware and
+          software) solutions and services. We are committed to providing our
+          customers with the best possible service and support. Our team of
+          experts has years of experience in the IT industry and is dedicated to
+          helping you achieve your business goals through innovative technology
+          solutions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="services-grid">
+      <!-- Service 1 -->
+      <div class="service-card">
+        <div class="service-card-bg"></div>
+        <div class="service-card-overlay"></div>
+        <div class="service-content">
+          <div class="service-title">Software Development</div>
+          <div class="service-description">
+            Custom software solutions tailored to your business needs. We
+            develop scalable applications using modern technologies and agile
+            methodologies.
+          </div>
+        </div>
+        <div class="service-divider"></div>
+        <div class="service-button-container">
+          <div class="service-button">
+            <div class="service-button-text">Learn More</div>
+            <div class="service-arrow"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card">
+        <div class="service-card-bg"></div>
+        <div class="service-card-overlay"></div>
+        <div class="service-content">
+          <div class="service-title">Cloud Solutions</div>
+          <div class="service-description">
+            Migrate to the cloud with our expert guidance. We offer cloud
+            consulting, migration, and management services for AWS, Azure, and
+            Google Cloud.
+          </div>
+        </div>
+        <div class="service-divider"></div>
+        <div class="service-button-container">
+          <div class="service-button">
+            <div class="service-button-text">Learn More</div>
+            <div class="service-arrow"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card">
+        <div class="service-card-bg"></div>
+        <div class="service-card-overlay"></div>
+        <div class="service-content">
+          <div class="service-title">Cybersecurity Services</div>
+          <div class="service-description">
+            Protect your business from cyber threats with our comprehensive
+            security solutions including threat detection, vulnerability
+            assessment, and compliance management.
+          </div>
+        </div>
+        <div class="service-divider"></div>
+        <div class="service-button-container">
+          <div class="service-button">
+            <div class="service-button-text">Learn More</div>
+            <div class="service-arrow"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-card">
+        <div class="service-card-bg"></div>
+        <div class="service-card-overlay"></div>
+        <div class="service-content">
+          <div class="service-title">IT Infrastructure Management</div>
+          <div class="service-description">
+            End-to-end management of your IT infrastructure including servers,
+            networks, and data centers. We ensure maximum uptime and optimal
+            performance.
+          </div>
+        </div>
+        <div class="service-divider"></div>
+        <div class="service-button-container">
+          <div class="service-button">
+            <div class="service-button-text">Learn More</div>
+            <div class="service-arrow"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="service-card">
+        <div class="service-card-bg"></div>
+        <div class="service-card-overlay"></div>
+        <div class="service-content">
+          <div class="service-title">
+            Data Analytics & Business Intelligence
+          </div>
+          <div class="service-description">
+            Transform your data into actionable insights. We provide data
+            analytics, visualization, and business intelligence solutions to
+            drive informed decision-making.
+          </div>
+        </div>
+        <div class="service-divider"></div>
+        <div class="service-button-container">
+          <div class="service-button">
+            <div class="service-button-text">Learn More</div>
+            <div class="service-arrow"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="service-card">
+        <div class="service-card-bg"></div>
+        <div class="service-card-overlay"></div>
+        <div class="service-content">
+          <div class="service-title">Network Solutions</div>
+          <div class="service-description">
+            Design, implement, and maintain robust network infrastructure. We
+            offer wired and wireless networking solutions for businesses of all
+            sizes.
+          </div>
+        </div>
+        <div class="service-divider"></div>
+        <div class="service-button-container">
+          <div class="service-button">
+            <div class="service-button-text">Learn More</div>
+            <div class="service-arrow"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 7 -->
+      <div class="service-card">
+        <div class="service-card-bg"></div>
+        <div class="service-card-overlay"></div>
+        <div class="service-content">
+          <div class="service-title">IT Consulting & Strategy</div>
+          <div class="service-description">
+            Strategic IT consulting to align technology with your business
+            objectives. We help you plan, implement, and optimize your IT
+            investments.
+          </div>
+        </div>
+        <div class="service-divider"></div>
+        <div class="service-button-container">
+          <div class="service-button">
+            <div class="service-button-text">Learn More</div>
+            <div class="service-arrow"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 8 -->
+      <div class="service-card">
+        <div class="service-card-bg"></div>
+        <div class="service-card-overlay"></div>
+        <div class="service-content">
+          <div class="service-title">Managed IT Services</div>
+          <div class="service-description">
+            Proactive IT management and support services. We monitor, maintain,
+            and optimize your IT environment 24/7 to prevent issues before they
+            occur.
+          </div>
+        </div>
+        <div class="service-divider"></div>
+        <div class="service-button-container">
+          <div class="service-button">
+            <div class="service-button-text">Learn More</div>
+            <div class="service-arrow"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 9 -->
+      <div class="service-card">
+        <div class="service-card-bg"></div>
+        <div class="service-card-overlay"></div>
+        <div class="service-content">
+          <div class="service-title">Digital Transformation</div>
+          <div class="service-description">
+            Guide your business through digital transformation with our
+            comprehensive approach. We help modernize processes, systems, and
+            customer experiences.
+          </div>
+        </div>
+        <div class="service-divider"></div>
+        <div class="service-button-container">
+          <div class="service-button">
+            <div class="service-button-text">Learn More</div>
+            <div class="service-arrow"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-main">
+          <div class="footer-logo-section">
+            <div class="footer-logo">RIS</div>
+            <div class="footer-contact">
+              <div class="contact-item">
+                <div class="contact-icon">✉</div>
+                <div class="contact-text">info@randomitsolutions.com</div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div class="contact-text">+1 234 567 8900</div>
+              </div>
+              <div class="address-item">
+                <div class="contact-icon">📍</div>
+                <div class="address-text">
+                  123 Tech Street, Innovation District, Digital City 45678,
+                  Techland
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-heading">Quick Links</div>
+            <div class="footer-links-container">
+              <a href="#" class="footer-link">Home</a>
+              <a href="#" class="footer-link">Services</a>
+              <a href="#" class="footer-link">Projects</a>
+              <a href="#" class="footer-link">About Us</a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-heading">Services</div>
+            <div class="footer-links-container">
+              <a href="#" class="footer-link">IT Consulting</a>
+              <a href="#" class="footer-link">Cloud Solutions</a>
+              <a href="#" class="footer-link">Network Security</a>
+            </div>
+          </div>
+
+          <div class="footer-social">
+            <div class="social-heading">Follow Us</div>
+            <div class="social-icons">
+              <div class="social-icon">f</div>
+              <div class="social-icon">in</div>
+              <div class="social-icon">t</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+        <div class="footer-copyright">
+          © 2023 Random IT Solutions. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

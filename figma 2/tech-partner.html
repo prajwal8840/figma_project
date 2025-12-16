@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tech Partner | Random IT Solution</title>
+<meta name="viewport" content="width=1440, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Be Vietnam Pro',sans-serif;
+}
+body{
+  background:#ffffff;
+}
+.page{
+  width:1440px;
+  margin:0 auto;
+}
+
+/* ================= NAVBAR ================= */
+.navbar{
+  position:relative;
+  width:1440px;
+  height:95px;
+  padding:25px 70px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#FAFAFA;
+  border-bottom:1px solid #D5D5D5;
+}
+.nav-left{
+  display:flex;
+  align-items:center;
+  gap:50px;
+}
+.logo{
+  width:36px;
+}
+.nav-links a{
+  margin-right:26px;
+  font-size:14px;
+  color:#262626;
+  text-decoration:none;
+}
+.nav-links .active{
+  background:#281571;
+  color:#fff;
+  padding:8px 16px;
+  border-radius:5px;
+}
+.btn-contact{
+  background:#DC2316;
+  color:#fff;
+  border:none;
+  padding:12px 24px;
+  border-radius:6px;
+  font-size:14px;
+  font-weight:600;
+}
+
+/* ================= HERO ================= */
+.hero{
+  position:relative;
+  width:1440px;
+  height:324px;
+  background:url('/figma 2/assets/images/teach_bg.png') center/cover no-repeat;
+}
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(25,25,25,0.7);
+}
+.hero-content{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+  padding:0 70px;
+}
+.hero-content h1{
+  font-size:40px;
+  font-weight:600;
+}
+.hero-content p{
+  margin-top:20px;
+  font-size:18px;
+  line-height:28px;
+  max-width:1300px;
+}
+
+/* ================= SECTION TITLES ================= */
+.section-title{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+.section-title h2{
+  font-size:40px;
+  font-weight:600;
+}
+.section-title .line{
+  height:4px;
+  flex:1;
+  background:#DC2316;
+  margin-top:15px;
+}
+
+/* ================= PARTNERS ================= */
+.partners{
+  padding:80px 70px;
+}
+.logos-grid{
+  display:grid;
+  grid-template-columns:repeat(6,197px);
+  gap:24px;
+  margin-top:40px;
+}
+.logo-box{
+  height:76px;
+  border:0.25px solid #191919;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.logo-box img{
+  max-width:85%;
+  max-height:65%;
+}
+
+/* ================= SECURITY ================= */
+.security-logos{
+  display:flex;
+  gap:24px;
+  margin-top:40px;
+}
+.mt-80{
+  margin-top:80px;
+}
+
+/* ================= FOOTER ================= */
+.footer{
+  background:#191919;
+  color:#fff;
+  padding:60px 70px 30px;
+}
+.footer-content{
+  display:flex;
+  justify-content:space-between;
+}
+.footer-left{
+  width:370px;
+}
+.footer-logo{
+  width:68px;
+  margin-bottom:20px;
+}
+.footer-left p{
+  margin-bottom:10px;
+  font-size:16px;
+}
+.footer-links h4,
+.footer-social h4{
+  margin-bottom:10px;
+  font-size:18px;
+}
+.footer-links p{
+  margin-bottom:8px;
+  font-size:16px;
+}
+.social-icons span{
+  display:inline-block;
+  width:36px;
+  height:36px;
+  background:#F7F7F8;
+  color:#191919;
+  line-height:36px;
+  text-align:center;
+  margin-right:14px;
+  border-radius:5px;
+}
+.footer-bottom{
+  margin-top:40px;
+  border-top:1px solid rgba(255,255,255,0.7);
+  padding-top:20px;
+  text-align:center;
+  font-size:14px;
+}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="nav-left">
+    <img src="/figma 2/assets/images/image.png" class="logo">
+    <nav class="nav-links">
+      <a class="active">Home</a>
+      <a>About</a>
+      <a>Team</a>
+      <a>Tech Partner</a>
+      <a>Our Projects</a>
+      <a>Our Services</a>
+      <a>Career</a>
+      <a>Blog</a>
+    </nav>
+  </div>
+  <button class="btn-contact">Contact Us</button>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Tech Partner</h1>
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    </p>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="partners">
+
+  <div class="section-title">
+    <h2>We are dealing with</h2>
+    <div class="line"></div>
+  </div>
+
+  <div class="logos-grid">
+    <div class="logo-box"><img src="/figma 2/assets/images/windows.png"></div>
+    <div class="logo-box"><img src="/figma 2/assets/images/honeywell.png"></div>
+    <div class="logo-box"><img src="/figma 2/assets/images/western_degital.png"></div>
+    <div class="logo-box"><img src="/figma 2/assets/images/D-Link.png"></div>
+    <div class="logo-box"><img src="/figma 2/assets/images/apple.png"></div>
+    <div class="logo-box"><img src="/figma 2/assets/images/autodesk.png"></div>
+
+    <div class="logo-box"><img src="/figma 2/tech-partner-logos/logo_7.png"></div>
+    <div class="logo-box"><img src="/figma 2/tech-partner-logos/logo_8.png"></div>
+    <div class="logo-box"><img src="/figma 2/tech-partner-logos/logo_9.png"></div>
+    <div class="logo-box"><img src="/figma 2/tech-partner-logos/logo_10.png"></div>
+    <div class="logo-box"><img src="/figma 2/tech-partner-logos/logo_11.png"></div>
+    <div class="logo-box"><img src="/figma 2/tech-partner-logos/logo_12.png"></div>
+
+    <div class="logo-box"><img src="/figma 2/tech-partner-logos/logo_13.png"></div>
+    <div class="logo-box"><img src="/figma 2/tech-partner-logos/logo_14.png"></div>
+    <div class="logo-box"><img src="/figma 2/tech-partner-logos/logo_15.png"></div>
+    <div class="logo-box"><img src="/figma 2/tech-partner-logos/logo_16.png"></div>
+    <div class="logo-box"><img src="/figma 2/tech-partner-logos/logo_17.png"></div>
+    <div class="logo-box"><img src="/figma 2/tech-partner-logos/logo_18.png"></div>
+
+    <div class="logo-box"><img src="/figma 2/tech-partner-logos/logo_19.png"></div>
+    <div class="logo-box"><img src="/figma 2/tech-partner-logos/logo_20.png"></div>
+    <div class="logo-box"><img src="/figma 2/tech-partner-logos/logo_21.png"></div>
+    <div class="logo-box"><img src="/figma 2/tech-partner-logos/logo_22.png"></div>
+    <div class="logo-box"><img src="/figma 2/tech-partner-logos/logo_23.png"></div>
+    <div class="logo-box"><img src="/figma 2/tech-partner-logos/logo_24.png"></div>
+
+    <div class="logo-box"><img src="/figma 2/tech-partner-logos/logo_25.png"></div>
+    <div class="logo-box"><img src="/figma 2/tech-partner-logos/logo_26.png"></div>
+    <div class="logo-box"><img src="/figma 2/tech-partner-logos/logo_27.png"></div>
+    <div class="logo-box"><img src="/figma 2/tech-partner-logos/logo_28.png"></div>
+  </div>
+
+  <div class="section-title mt-80">
+    <h2>Security Services</h2>
+    <div class="line"></div>
+  </div>
+
+  <div class="security-logos">
+    <div class="logo-box"><img src="/figma 2/tech-partner-logos/logo_29.png"></div>
+    <div class="logo-box"><img src="/figma 2/tech-partner-logos/logo_30.png"></div>
+    <div class="logo-box"><img src="/figma 2/tech-partner-logos/logo_32.png"></div>
+    <div class="logo-box"><img src="/figma 2/tech-partner-logos/logo_31.png"></div>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-content">
+
+    <div class="footer-left">
+      <img src="/figma 2/assets/images/image.png" class="footer-logo">
+      <p>hello@randomitsolution.com</p>
+      <p>+91 8448870418, +91 8507541015</p>
+      <p>2315/23D, 2nd floor, Near Atul Kataria Chowk, Gurugram</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Home</h4>
+      <p>Introduction</p>
+      <p>Our Clients</p>
+      <p>Our Services</p>
+      <p>Team Management</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>About Us</h4>
+      <p>Company</p>
+      <p>Achievements</p>
+      <p>Our Goals</p>
+    </div>
+
+    <div class="footer-social">
+      <h4>Follow us on</h4>
+      <div class="social-icons">
+        <span>f</span>
+        <span>t</span>
+        <span>in</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2024 Global Infotech. All rights reserved.
+  </div>
+</footer>
+
+</div>
+</body>
+</html>

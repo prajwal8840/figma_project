@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - RIS Service | Professional IT Solutions Provider</title>
+    <meta
+      name="description"
+      content="Learn about RIS Service's mission, team, and values. We are experts in IT solutions, CCTV systems, and infrastructure services."
+    />
+
+    <style>
+      /* ===== RESET & BASE STYLES ===== */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        line-height: 1.6;
+        color: #191919;
+        background-color: #ffffff;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .container {
+        width: 100%;
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+
+      /* ===== HEADER (Matching Main Page) ===== */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 24px 16px;
+        border-bottom: 1px solid #e0e0e0;
+        background-color: #ffffff;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      .logo {
+        width: 36px;
+        height: 34px;
+      }
+      .nav-menu {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+      }
+      .nav-item {
+        font-size: 14px;
+        font-weight: 500;
+        color: #191919;
+        padding: 8px 16px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+      }
+      .nav-item:hover,
+      .nav-item.active {
+        background-color: #281571;
+        color: #ffffff;
+      }
+      .contact-btn {
+        font-size: 14px;
+        font-weight: 600;
+        color: #ffffff;
+        background-color: #dc2316;
+        padding: 12px 24px;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+      }
+      .contact-btn:hover {
+        background-color: #b91c0c;
+        transform: translateY(-2px);
+      }
+      .hamburger {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #191919;
+      }
+
+      /* ===== ABOUT HERO SECTION ===== */
+      .about-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url("/figma 2/assets/images/about-hero-bg.jpg") center/cover no-repeat;
+        color: white;
+        text-align: center;
+        padding: 120px 20px;
+        margin-bottom: 80px;
+      }
+      .about-hero h1 {
+        font-size: 3.5rem;
+        font-family: "Lateef", serif;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+      }
+      .about-hero p {
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin: 0 auto;
+        opacity: 0.9;
+      }
+
+      /* ===== OUR MISSION SECTION ===== */
+      .mission-section {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        margin-bottom: 100px;
+      }
+      .mission-image {
+        flex: 1;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+      .mission-content {
+        flex: 1;
+      }
+      .section-tag {
+        color: #dc2316;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+      }
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #191919;
+        margin-bottom: 25px;
+        line-height: 1.2;
+      }
+      .section-description {
+        color: #555;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 30px;
+      }
+      .highlight-box {
+        background-color: #f8f9fa;
+        border-left: 4px solid #281571;
+        padding: 25px;
+        border-radius: 0 8px 8px 0;
+        margin-top: 30px;
+      }
+      .highlight-box p {
+        font-style: italic;
+        color: #333;
+        font-size: 1.1rem;
+      }
+
+      /* ===== OUR VALUES SECTION ===== */
+      .values-section {
+        background-color: #f8f8f8;
+        padding: 80px 0;
+        margin-bottom: 100px;
+      }
+      .section-header-center {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 60px;
+      }
+      .values-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+      }
+      .value-card {
+        background: white;
+        padding: 40px 30px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+      }
+      .value-card:hover {
+        transform: translateY(-10px);
+      }
+      .value-icon {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, #281571, #dc2316);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 25px;
+        color: white;
+        font-size: 1.8rem;
+      }
+      .value-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        color: #191919;
+      }
+
+      /* ===== TEAM SECTION ===== */
+      .team-section {
+        margin-bottom: 100px;
+      }
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 40px;
+        margin-top: 50px;
+      }
+      .team-member {
+        text-align: center;
+      }
+      .member-photo {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto 20px;
+        border: 5px solid #f0f0f0;
+      }
+      .member-name {
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+      .member-role {
+        color: #dc2316;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+
+      /* ===== CTA SECTION ===== */
+      .cta-section {
+        background: linear-gradient(135deg, #281571, #3a1f99);
+        color: white;
+        text-align: center;
+        padding: 80px 20px;
+        border-radius: 15px;
+        margin-bottom: 80px;
+      }
+      .cta-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+      .cta-section p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto 40px;
+        opacity: 0.9;
+      }
+      .cta-button {
+        display: inline-block;
+        background-color: #dc2316;
+        color: white;
+        padding: 18px 45px;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border: 2px solid #dc2316;
+      }
+      .cta-button:hover {
+        background-color: transparent;
+        color: white;
+      }
+
+      /* ===== FOOTER (Matching Main Page) ===== */
+      .footer {
+        background-color: #191919;
+        color: #ffffff;
+        padding: 60px 0 30px;
+      }
+      .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 50px;
+        margin-bottom: 40px;
+      }
+      .footer-logo {
+        width: 68px;
+        margin-bottom: 25px;
+      }
+      .footer-contact-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 15px;
+      }
+      .footer-nav {
+        display: flex;
+        gap: 60px;
+      }
+      .footer-nav-section h3 {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
+      .footer-nav-list {
+        list-style: none;
+      }
+      .footer-nav-list li {
+        margin-bottom: 10px;
+      }
+      .footer-nav-list a {
+        color: #ccc;
+        transition: color 0.3s;
+      }
+      .footer-nav-list a:hover {
+        color: #dc2316;
+      }
+      .footer-divider {
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.2);
+        margin: 30px 0;
+      }
+      .footer-copyright {
+        text-align: center;
+        color: #aaa;
+        font-size: 0.9rem;
+      }
+
+      /* ===== RESPONSIVE DESIGN ===== */
+      @media (max-width: 992px) {
+        .mission-section {
+          flex-direction: column;
+        }
+        .nav-menu {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          background-color: white;
+          padding: 20px;
+          box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        .nav-menu.active {
+          display: flex;
+        }
+        .hamburger {
+          display: block;
+        }
+        .about-hero h1 {
+          font-size: 2.8rem;
+        }
+        .section-title {
+          font-size: 2rem;
+        }
+        .footer-container {
+          flex-direction: column;
+          gap: 40px;
+        }
+        .footer-nav {
+          flex-direction: column;
+          gap: 40px;
+        }
+      }
+      @media (max-width: 768px) {
+        .about-hero {
+          padding: 80px 20px;
+        }
+        .about-hero h1 {
+          font-size: 2.2rem;
+        }
+        .values-grid {
+          grid-template-columns: 1fr;
+        }
+        .team-grid {
+          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
+      }
+    </style>
+    <!-- Link to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Lateef&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header container">
+      <a href="index.html" class="logo-link">
+        <img
+          src="/figma 2/assets/images/image.png"
+          alt="RIS Logo"
+          class="logo"
+        />
+      </a>
+
+      <button class="hamburger" id="hamburgerBtn">☰</button>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="main.html" class="nav-item">Home</a>
+        <a href="about.html" class="nav-item active">About</a>
+        <a href="#services" class="nav-item">Services</a>
+        <a href="#projects" class="nav-item">Projects</a>
+        <a href="team.html" class="nav-item">Team</a>
+        <a href="blog.html" class="nav-item">Blog</a>
+        <a href="contact.html" class="contact-btn">Contact Us</a>
+      </nav>
+    </header>
+
+    <!-- About Hero -->
+    <section class="about-hero">
+      <div class="container">
+        <h1>About RIS Service</h1>
+        <p>
+          For over a decade, we have been at the forefront of providing reliable
+          and innovative IT solutions, helping businesses transform their
+          digital infrastructure and achieve operational excellence.
+        </p>
+      </div>
+    </section>
+
+    <!-- Our Mission & Story -->
+    <section class="mission-section container">
+      <div class="mission-image">
+        <img
+          src="/figma 2/assets/images/img_rectangle_21.png"
+          alt="RIS Team discussing project"
+        />
+      </div>
+      <div class="mission-content">
+        <span class="section-tag">Our Mission</span>
+        <h2 class="section-title">
+          Driving Business Success Through Technology
+        </h2>
+        <p class="section-description">
+          Founded in 2010, RIS Service began with a simple goal: to make
+          advanced IT solutions accessible and manageable for businesses of all
+          sizes. What started as a small team of passionate technicians has
+          grown into a trusted partner for over 500+ clients nationwide.
+        </p>
+        <p class="section-description">
+          We believe that technology should empower, not complicate. Our
+          approach combines deep technical expertise with a clear understanding
+          of business objectives to deliver solutions that are not only robust
+          and secure but also scalable and cost-effective.
+        </p>
+        <div class="highlight-box">
+          <p>
+            "Our commitment is to build lasting partnerships, providing not just
+            services, but peace of mind and a clear path for our clients'
+            technological growth."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="values-section">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="section-tag">What We Stand For</span>
+          <h2 class="section-title">Our Core Values</h2>
+          <p class="section-description">
+            These principles guide every project, decision, and interaction at
+            RIS Service.
+          </p>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <h3>Integrity & Trust</h3>
+            <p>
+              We build relationships based on honesty and transparency,
+              delivering on our promises and providing unbiased advice.
+            </p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3>Innovation</h3>
+            <p>
+              We continuously explore new technologies and methodologies to
+              provide cutting-edge, future-proof solutions for our clients.
+            </p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Customer Success</h3>
+            <p>
+              Your goals are our goals. We measure our success by the tangible
+              value and positive outcomes we deliver to your business.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Meet The Team (Optional Section - Add if you have team photos) -->
+    <section class="team-section container" id="team">
+      <div class="section-header-center">
+        <span class="section-tag">Our Experts</span>
+        <h2 class="section-title">Meet Our Leadership</h2>
+        <p class="section-description">
+          A team of certified professionals passionate about technology and
+          client success.
+        </p>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-member">
+          <img
+            src="/figma 2/assets/images/team-member1.jpg"
+            alt="Raghav Sharma"
+            class="member-photo"
+            onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'"
+          />
+          <h3 class="member-name">Raghav Sharma</h3>
+          <p class="member-role">Founder & CEO</p>
+          <p>20+ years in IT infrastructure and strategic planning.</p>
+        </div>
+        <div class="team-member">
+          <img
+            src="/figma 2/assets/images/team-member2.jpg"
+            alt="Priya Verma"
+            class="member-photo"
+            onerror="this.src='https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'"
+          />
+          <h3 class="member-name">Priya Verma</h3>
+          <p class="member-role">Head of Technology</p>
+          <p>Expert in cloud solutions and network security.</p>
+        </div>
+        <div class="team-member">
+          <img
+            src="/figma 2/assets/images/team-member3.jpg"
+            alt="Arjun Mehta"
+            class="member-photo"
+            onerror="this.src='https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'"
+          />
+          <h3 class="member-name">Arjun Mehta</h3>
+          <p class="member-role">Operations Director</p>
+          <p>Specializes in project management and client relations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="container">
+      <div class="cta-section">
+        <h2>Ready to Transform Your IT Infrastructure?</h2>
+        <p>
+          Partner with RIS Service for reliable, innovative, and tailored
+          technology solutions that drive your business forward.
+        </p>
+        <a href="index.html#contact" class="cta-button"
+          >Start a Conversation Today</a
+        >
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-container">
+          <div class="footer-left">
+            <img
+              src="/figma 2/assets/images/img_footer_logo.png"
+              alt="RIS Footer Logo"
+              class="footer-logo"
+            />
+            <div class="footer-contact">
+              <div class="footer-contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>raghav@randomitsolutions.com</span>
+              </div>
+              <div class="footer-contact-item">
+                <i class="fas fa-phone"></i>
+                <span>+91 8448870418, +91 8507541015</span>
+              </div>
+              <div class="footer-contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span
+                  >2315/23D, 2nd floor, Near Atul Kataria Chowk, Gurugram,
+                  Haryana 122001</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-nav">
+            <div class="footer-nav-section">
+              <h3>Company</h3>
+              <ul class="footer-nav-list">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#services">Our Services</a></li>
+                <li><a href="#projects">Case Studies</a></li>
+                <li><a href="#blog">Blog & News</a></li>
+              </ul>
+            </div>
+            <div class="footer-nav-section">
+              <h3>Legal</h3>
+              <ul class="footer-nav-list">
+                <li><a href="#privacy">Privacy Policy</a></li>
+                <li><a href="#terms">Terms of Service</a></li>
+                <li><a href="#cookies">Cookie Policy</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-social">
+            <h3>Connect With Us</h3>
+            <div class="footer-social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+        <p class="footer-copyright">
+          © 2024 RIS Service (Random IT Solutions Pvt. Ltd.). All rights
+          reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile Menu Toggle
+      const hamburgerBtn = document.getElementById("hamburgerBtn");
+      const navMenu = document.getElementById("navMenu");
+
+      if (hamburgerBtn) {
+        hamburgerBtn.addEventListener("click", () => {
+          navMenu.classList.toggle("active");
+        });
+      }
+
+      // Close menu when clicking outside
+      document.addEventListener("click", (event) => {
+        if (
+          !hamburgerBtn.contains(event.target) &&
+          !navMenu.contains(event.target)
+        ) {
+          navMenu.classList.remove("active");
+        }
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: "smooth",
+            });
+            // Close mobile menu after click
+            navMenu.classList.remove("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Random IT Solutions</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Be Vietnam Pro", sans-serif;
+        background: #ffffff;
+        position: relative;
+        width: 1440px;
+        margin: 0 auto;
+        height: 1481px;
+      }
+
+      /* Navbar */
+      .navbar {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 70px;
+        position: absolute;
+        width: 1440px;
+        height: 95px;
+        left: 0px;
+        top: 0px;
+        background: #fafafa;
+        border-bottom: 1px solid #d5d5d5;
+      }
+
+      .nav-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 50px;
+        width: 743.15px;
+        height: 41px;
+      }
+
+      .logo {
+        width: 36.15px;
+        height: 35px;
+        background: #dc2316;
+        border-radius: 4px;
+      }
+
+      .nav-buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 26px;
+        width: 657px;
+        height: 41px;
+      }
+
+      .nav-button {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px 0px 10px 16px;
+        gap: 10px;
+        height: 41px;
+        border-radius: 6px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      .nav-button-text {
+        font-family: "Be Vietnam Pro";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: #262626;
+      }
+
+      .contact-button {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 12px 24px;
+        gap: 8px;
+        width: 127px;
+        height: 45px;
+        background: #dc2316;
+        border-radius: 6px;
+        text-decoration: none;
+      }
+
+      .contact-button-text {
+        font-family: "Be Vietnam Pro";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 150%;
+        color: #ffffff;
+      }
+
+      /* Main Content */
+      .contact-container {
+        position: absolute;
+        width: 1300px;
+        height: 817px;
+        left: 70px;
+        top: 135px;
+        display: flex;
+      }
+
+      /* Left Contact Info Section */
+      .contact-info {
+        width: 529px;
+        height: 817px;
+        background: #191919;
+        border-radius: 14px 0px 0px 14px;
+        padding: 31px 46px;
+      }
+
+      .contact-info-content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 437.18px;
+        height: 756px;
+      }
+
+      .contact-title {
+        font-family: "Be Vietnam";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 41px;
+        color: #ffffff;
+      }
+
+      .contact-subtitle {
+        font-family: "Be Vietnam";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 27px;
+        color: rgba(255, 255, 255, 0.7);
+        margin-top: 14px;
+      }
+
+      .contact-methods {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        width: 417px;
+      }
+
+      .contact-method {
+        position: relative;
+        padding-left: 40px;
+      }
+
+      .method-icon {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .icon-pin::before {
+        content: "";
+        display: block;
+        width: 15px;
+        height: 15px;
+        border: 1.5px solid #dc2316;
+        border-radius: 50%;
+      }
+
+      .icon-phone::before {
+        content: "";
+        display: block;
+        width: 15px;
+        height: 15px;
+        border: 1.5px solid #dc2316;
+        position: relative;
+      }
+
+      .icon-phone::after {
+        content: "";
+        display: block;
+        width: 9px;
+        height: 9px;
+        border: 1.5px solid #dc2316;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+      }
+
+      .icon-office::before {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 15px;
+        border: 1.5px solid #dc2316;
+        border-radius: 1px;
+      }
+
+      .method-title {
+        font-family: "Be Vietnam";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 27px;
+        color: #ffffff;
+      }
+
+      .method-description {
+        font-family: "Be Vietnam";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 27px;
+        color: rgba(255, 255, 255, 0.7);
+        margin-top: 5px;
+      }
+
+      .method-details {
+        margin-top: 10px;
+      }
+
+      .method-detail {
+        font-family: "Be Vietnam";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 27px;
+        color: #ffffff;
+        margin-bottom: 5px;
+      }
+
+      /* Right Contact Form Section */
+      .contact-form-section {
+        width: 772px;
+        height: 817px;
+        border: 0.5px solid #191919;
+        border-radius: 0px 14px 14px 0px;
+        padding: 74px 67px;
+      }
+
+      .form-title {
+        font-family: "Be Vietnam";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 47px;
+        color: #191919;
+        margin-bottom: 63px;
+      }
+
+      .form-row {
+        display: flex;
+        gap: 21px;
+        margin-bottom: 40px;
+      }
+
+      .form-group {
+        flex: 1;
+      }
+
+      .form-label {
+        display: block;
+        font-family: "Be Vietnam";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 23px;
+        color: #191919;
+        margin-bottom: 11px;
+      }
+
+      .form-input {
+        box-sizing: border-box;
+        width: 100%;
+        height: 50px;
+        background: #f9f9f9;
+        border: 0.5px solid #191919;
+        padding: 14px 20px;
+        font-family: "Be Vietnam";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 22px;
+        color: #191919;
+      }
+
+      .form-input::placeholder {
+        color: #a8a8a8;
+      }
+
+      .phone-input-container {
+        position: relative;
+      }
+
+      .country-code {
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-family: "Be Vietnam";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 22px;
+        color: #191919;
+      }
+
+      .phone-input {
+        padding-left: 55px;
+      }
+
+      .dropdown-arrow {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 17.82px;
+        height: 17px;
+      }
+
+      .dropdown-arrow::before {
+        content: "";
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-right: 1.5px solid #191919;
+        border-bottom: 1.5px solid #191919;
+        transform: rotate(45deg);
+        top: 3px;
+      }
+
+      .message-group {
+        margin-bottom: 40px;
+      }
+
+      .form-textarea {
+        box-sizing: border-box;
+        width: 100%;
+        height: 147px;
+        background: #f9f9f9;
+        border: 0.5px solid #191919;
+        padding: 14px 20px;
+        font-family: "Be Vietnam";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 22px;
+        color: #191919;
+        resize: none;
+      }
+
+      .form-textarea::placeholder {
+        color: #a8a8a8;
+      }
+
+      .submit-button {
+        box-sizing: border-box;
+        width: 210px;
+        height: 50px;
+        border: 1px solid #191919;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        cursor: pointer;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: #191919;
+        transition: all 0.3s;
+      }
+
+      .submit-button:hover {
+        background: #191919;
+        color: #ffffff;
+      }
+
+      .submit-arrow {
+        width: 16.77px;
+        height: 16px;
+      }
+
+      .submit-arrow::before {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-right: 1.5px solid #191919;
+        border-bottom: 1.5px solid #191919;
+        transform: rotate(-45deg);
+      }
+
+      .submit-button:hover .submit-arrow::before {
+        border-color: #ffffff;
+      }
+
+      /* Footer */
+      .footer {
+        position: absolute;
+        width: 1440px;
+        height: 458px;
+        left: 0;
+        bottom: 0;
+        background: #191919;
+      }
+
+      .footer-content {
+        position: absolute;
+        width: 1300px;
+        height: 332px;
+        left: 70px;
+        top: 1073px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+      }
+
+      .footer-main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        height: 244px;
+      }
+
+      .footer-logo-section {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 373px;
+      }
+
+      .footer-logo {
+        width: 68.16px;
+        height: 66px;
+        background: #dc2316;
+        border-radius: 4px;
+      }
+
+      .footer-contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        width: 304px;
+      }
+
+      .footer-contact-item {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .footer-icon {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+      }
+
+      .footer-text {
+        font-family: "Be Vietnam Pro";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #ffffff;
+      }
+
+      .footer-links-section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 149px;
+      }
+
+      .footer-heading {
+        font-family: "Be Vietnam Pro";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 150%;
+        color: #ffffff;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 187px;
+      }
+
+      .footer-link {
+        font-family: "Be Vietnam Pro";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #ffffff;
+        text-decoration: none;
+      }
+
+      .footer-link:hover {
+        text-decoration: underline;
+      }
+
+      .footer-social {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 160px;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 14px;
+      }
+
+      .social-icon {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        background: #f7f7f8;
+        border: 1px solid #f1f1f3;
+        border-radius: 5px;
+        color: #191919;
+        text-decoration: none;
+      }
+
+      .footer-divider {
+        width: 100%;
+        height: 0px;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+      }
+
+      .footer-copyright {
+        font-family: "Be Vietnam Pro";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
+        color: #ffffff;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo"></div>
+        <div class="nav-buttons">
+          <a href="#" class="nav-button">
+            <span class="nav-button-text">Home</span>
+          </a>
+          <a href="#" class="nav-button">
+            <span class="nav-button-text">About</span>
+          </a>
+          <a href="#" class="nav-button">
+            <span class="nav-button-text">Team</span>
+          </a>
+          <a href="#" class="nav-button">
+            <span class="nav-button-text">Tech Partner</span>
+          </a>
+          <a href="#" class="nav-button">
+            <span class="nav-button-text">Our Projects</span>
+          </a>
+          <a href="#" class="nav-button">
+            <span class="nav-button-text">Our Services</span>
+          </a>
+          <a href="#" class="nav-button">
+            <span class="nav-button-text">Career</span>
+          </a>
+          <a href="#" class="nav-button">
+            <span class="nav-button-text">Blog</span>
+          </a>
+        </div>
+      </div>
+      <a href="#" class="contact-button">
+        <span class="contact-button-text">Contact Us</span>
+      </a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="contact-container">
+      <!-- Left Contact Info -->
+      <div class="contact-info">
+        <div class="contact-info-content">
+          <div>
+            <h1 class="contact-title">Other ways to connect</h1>
+            <p class="contact-subtitle">
+              We love to hear from you. Our friendly team is always here to
+              chat.
+            </p>
+          </div>
+
+          <div class="contact-methods">
+            <!-- Email -->
+            <div class="contact-method">
+              <div class="method-icon icon-pin"></div>
+              <h3 class="method-title">Reach us on email</h3>
+              <p class="method-description">
+                Our friendly team is here to help.
+              </p>
+              <div class="method-details">
+                <div class="method-detail">raghav@randomitsolutions.com</div>
+                <div class="method-detail">
+                  suman.kumar@randomitsolutions.com
+                </div>
+                <div class="method-detail">marketing@randomitsolutions.com</div>
+                <div class="method-detail">rk@randomitsolutions.com</div>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="contact-method">
+              <div class="method-icon icon-phone"></div>
+              <h3 class="method-title">Phone</h3>
+              <p class="method-description">Mon-Fri from 8am to 5pm.</p>
+              <div class="method-details">
+                <div class="method-detail">MR. RAGHAV - 8448870418</div>
+                <div class="method-detail">
+                  Mr. SUMAN KUMAR JHA - 8507541015
+                </div>
+                <div class="method-detail">Mr. RITIK - 9319231117</div>
+                <div class="method-detail">MR. R KUMAR - 9717157829</div>
+              </div>
+            </div>
+
+            <!-- Office -->
+            <div class="contact-method">
+              <div class="method-icon icon-office"></div>
+              <h3 class="method-title">Office</h3>
+              <p class="method-description">Come say hello at our office HQ.</p>
+              <div class="method-details">
+                <div class="method-detail">
+                  2315/230, 2nd floor, Near Atul Kataria Chowk, behind Karim's
+                  Hotel, Near Sec-14 Gurugram, Haryana 122001
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Contact Form -->
+      <div class="contact-form-section">
+        <h2 class="form-title">Love to hear from you,<br />Get in touch 👋</h2>
+
+        <form>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Your Name</label>
+              <input
+                type="text"
+                class="form-input"
+                placeholder="Edward Snowden"
+                value="Edward Snowden"
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Your Email</label>
+              <input
+                type="email"
+                class="form-input"
+                placeholder="itanexample@gmail.com"
+                value="itanexample@gmail.com"
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Phone No.</label>
+              <div class="phone-input-container">
+                <span class="country-code">+91</span>
+                <input
+                  type="tel"
+                  class="form-input phone-input"
+                  placeholder="Enter your phone no."
+                />
+                <div class="dropdown-arrow"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label"
+                >What Kind of Service You Looking for?</label
+              >
+              <div class="phone-input-container">
+                <input
+                  type="text"
+                  class="form-input phone-input"
+                  placeholder="New Computer Setup"
+                  value="New Computer Setup"
+                />
+                <div class="dropdown-arrow"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group message-group">
+            <label class="form-label">Message</label>
+            <textarea
+              class="form-textarea"
+              placeholder="Let tell us know your project about"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="submit-button">
+            <span>Send message</span>
+            <div class="submit-arrow"></div>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-main">
+          <div class="footer-logo-section">
+            <div class="footer-logo"></div>
+            <div class="footer-contact-info">
+              <div class="footer-contact-item">
+                <div class="footer-icon">📧</div>
+                <span class="footer-text">raghav@randomitsolutions.com</span>
+              </div>
+              <div class="footer-contact-item">
+                <div class="footer-icon">📞</div>
+                <span class="footer-text">+918448870418, +918507541015</span>
+              </div>
+              <div class="footer-contact-item">
+                <div class="footer-icon">📍</div>
+                <span class="footer-text"
+                  >2315/230, 2nd floor, Near Atul Kataria Chowk, behind Karim's
+                  Hotel, Near Sec-14 Gurugram, Haryana 122001</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-links-section">
+            <h3 class="footer-heading">Home</h3>
+            <div class="footer-links">
+              <a href="#" class="footer-link">Introduction</a>
+              <a href="#" class="footer-link">Our Clients</a>
+              <a href="#" class="footer-link">Our Services</a>
+              <a href="#" class="footer-link">Team</a>
+            </div>
+          </div>
+
+          <div class="footer-links-section">
+            <h3 class="footer-heading">About Us</h3>
+            <div class="footer-links">
+              <a href="#" class="footer-link">Company</a>
+              <a href="#" class="footer-link">Achievements</a>
+              <a href="#" class="footer-link">Our Goals</a>
+              <a href="#" class="footer-link">Management</a>
+            </div>
+          </div>
+
+          <div class="footer-social">
+            <h3 class="footer-heading">Follow us on</h3>
+            <div class="social-icons">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+        <div class="footer-copyright">
+          © 2024 Global Infotech. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

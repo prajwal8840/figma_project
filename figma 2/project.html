@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Projects | Random IT Solution</title>
+    <meta name="viewport" content="width=1440" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Be Vietnam Pro", sans-serif;
+      }
+      body {
+        background: #fff;
+      }
+      .page {
+        width: 1440px;
+        margin: 0 auto;
+      }
+
+      /* ================= NAVBAR ================= */
+      .navbar {
+        height: 95px;
+        padding: 25px 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fafafa;
+        border-bottom: 1px solid #d5d5d5;
+      }
+      .nav-left {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+      }
+      .logo {
+        width: 36px;
+      }
+      .nav-links a {
+        margin-right: 26px;
+        font-size: 14px;
+        color: #262626;
+        text-decoration: none;
+      }
+      .contact-btn {
+        background: #dc2316;
+        color: #fff;
+        padding: 12px 24px;
+        border-radius: 6px;
+        border: none;
+        font-weight: 600;
+      }
+
+      /* ================= HERO ================= */
+      .hero {
+        height: 258px;
+        background: url("/figma 2/assets/images/teach_bg.png") center/cover
+          no-repeat;
+        position: relative;
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(25, 25, 25, 0.7);
+      }
+      .hero-content {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        text-align: center;
+        padding: 0 70px;
+      }
+      .hero-content h1 {
+        font-size: 40px;
+        font-weight: 600;
+      }
+      .hero-content p {
+        margin-top: 10px;
+        font-size: 18px;
+        line-height: 28px;
+      }
+
+      .section-title {
+        width: 1300px;
+        margin: 60px auto 30px;
+        display: flex;
+        align-items: flex-end;
+        gap: 20px;
+      }
+      .section-title .left h4 {
+        color: #dc2316;
+        font-size: 30px;
+      }
+      .section-title .left h2 {
+        font-size: 40px;
+        color: #191919;
+      }
+      .section-title .line {
+        flex: 1;
+        height: 4px;
+        background: #281571;
+      }
+
+      .projects {
+        width: 1300px;
+        margin: 50px auto;
+      }
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+      }
+      .project-card {
+        border: 0.5px solid #191919;
+      }
+      .project-card img {
+        width: 100%;
+        height: 287px;
+        object-fit: cover;
+      }
+      .project-info {
+        background: #191919;
+        color: #fff;
+        padding: 16px;
+      }
+      .project-info h3 {
+        font-size: 16px;
+        font-weight: 600;
+      }
+      .project-info p {
+        font-size: 12px;
+        line-height: 18px;
+        margin-top: 6px;
+        font-weight: 300;
+      }
+
+      .view-btn {
+        width: 210px;
+        height: 50px;
+        margin: 60px auto;
+        border: 0.5px solid #191919;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .footer {
+        background: #191919;
+        color: #fff;
+        padding: 60px 70px 30px;
+      }
+      .footer-top {
+        display: flex;
+        justify-content: space-between;
+      }
+      .footer-col h4 {
+        margin-bottom: 10px;
+      }
+      .footer-col p {
+        margin-bottom: 8px;
+      }
+      .footer-bottom {
+        margin-top: 40px;
+        border-top: 1px solid rgba(255, 255, 255, 0.7);
+        padding-top: 20px;
+        text-align: center;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page">
+      <!-- NAVBAR -->
+      <header class="navbar">
+        <div class="nav-left">
+          <img src="/figma 2/assets/images/image.png" class="logo" />
+          <nav class="nav-links">
+            <a href="main.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="team.html">Team</a>
+            <a href="project.html">Projects</a>
+            <a href="#">Services</a>
+            <a href="blog.html">Blog</a>
+          </nav>
+        </div>
+        <button class="contact-btn">Contact Us</button>
+      </header>
+
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Our Projects</h1>
+          <p>Delivering powerful IT solutions for modern businesses</p>
+        </div>
+      </section>
+
+      <!-- TITLE -->
+      <div class="section-title">
+        <div class="left">
+          <h4>Our</h4>
+          <h2>Projects</h2>
+        </div>
+        <div class="line"></div>
+      </div>
+
+      <!-- PROJECTS -->
+      <section class="projects">
+        <div class="project-grid">
+          <div class="project-card">
+            <img src="/figma 2/assets/images/img_rectangle_25.png" />
+            <div class="project-info">
+              <h3>IT Solutions</h3>
+              <p>
+                Random IT Solutions Pvt. Ltd. is a totally IT solutions
+                provider.
+              </p>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="/figma 2/assets/images/img_rectangle_25.png" />
+            <div class="project-info">
+              <h3>Server Management</h3>
+              <p>Hardware and software enterprise solutions.</p>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="/figma 2/assets/images/img_rectangle_25.png" />
+            <div class="project-info">
+              <h3>Networking</h3>
+              <p>Secure and scalable networking systems.</p>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="/figma 2/assets/images/img_rectangle_25.png" />
+            <div class="project-info">
+              <h3>Cloud Solutions</h3>
+              <p>Modern cloud and virtualization services.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="view-btn">View All</div>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="footer-top">
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <p>info@randomitsolution.com</p>
+            <p>+91 8448870418</p>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <p>About Us</p>
+            <p>Projects</p>
+            <p>Services</p>
+          </div>
+          <div class="footer-col">
+            <h4>Follow Us</h4>
+            <p>Facebook</p>
+            <p>LinkedIn</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          © 2024 Global Infotech. All rights reserved.
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
